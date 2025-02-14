@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RooMates Sign Up</title>
+    <style>
+        /* ------------------------------
+       COLOR VARIABLES (Customize)
+    --------------------------------*/
+        :root {
+            --primary-color: #6f2da8;
+            /* Purple */
+            --secondary-color: #FFC107;
+            /* Gold */
+            --text-color: #333;
+            --light-bg: #f8f8f8;
+        }
+
+        /* Basic CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Signup container with fade-in animation */
+        .signup-container {
+            background-color: #fff;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Logo and Sign Up Label */
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .signup-label {
+            margin-left: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Form Styling */
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signup-form label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .signup-form input,
+        .signup-form select {
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .signup-form input:focus,
+        .signup-form select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px var(--primary-color);
+        }
+
+        .signup-form button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-form button:hover {
+            background-color: #5a2287;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .signup-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <!-- Logo and Sign Up Label -->
+        <div class="logo">
+            <img src="images/logo.png" alt="RooMates Logo" />
+            <span class="signup-label">Sign Up</span>
+        </div>
+        <!-- Sign Up Form -->
+        <form class="signup-form" action="#" method="POST">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+
+            <label for="department">Department</label>
+            <!-- Input with datalist for searchable department options -->
+            <input type="text" id="department" name="department" list="departments"
+                placeholder="Search and select department" required />
+            <datalist id="departments">
+                <option value="Art Education">
+                <option value="Graphic Design">
+                <option value="Creative Arts">
+                <option value="Social Sciences">
+                <option value="Special Education">
+                <option value="Home Economics">
+                <option value="Communications">
+                <option value="ICT">
+                <option value="Languages">
+                <option value="Business">
+                    <!-- Add more options as needed -->
+            </datalist>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" selected disabled>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required />
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+
+</html>
