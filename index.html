@@ -4,7 +4,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RooMates Landing Page</title>
+    <title>RooMates - Find Affordable Hostels & Roommates in Ghana</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="RooMates is your premier platform to search for affordable hostels and find roommates in Ghana. Filter by location, price range, and room type to discover your perfect living arrangement." />
+    <meta name="keywords" content="hostels, roommates, Ghana, affordable hostels, student housing, RooMates" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.roomates.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="RooMates - Find Affordable Hostels & Roommates in Ghana" />
+    <meta property="og:description"
+        content="Search for affordable hostels and find the best roommate options in Ghana with RooMates." />
+    <meta property="og:image" content="https://www.roomates.com/images/logo.png" />
+    <meta property="og:url" content="https://www.roomates.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
     <style>
         /* ------------------------------
        COLOR VARIABLES (Customize)
@@ -30,6 +49,19 @@
             background-color: #fff;
             color: var(--text-color);
             line-height: 1.5;
+        }
+
+        /* Visually Hidden Class for Accessibility */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
 
         /* ------------------------------
@@ -77,6 +109,11 @@
             flex-direction: column;
             gap: 1rem;
             padding: 1rem;
+        }
+
+        /* Visually hidden H1 for SEO & Accessibility */
+        main>.visually-hidden {
+            /* See .visually-hidden CSS above */
         }
 
         .content-wrapper {
@@ -354,23 +391,31 @@
     <header>
         <div class="logo-container">
             <!-- Replace with your actual logo path -->
-            <img src="images/logo.png" alt="RooMates Logo">
+            <img src="images/logo.png" alt="RooMates Logo" />
         </div>
-        <div class="header-buttons">
+        <nav class="header-buttons">
             <a href="#">Login</a>
             <a href="#">Sign Up</a>
-        </div>
+        </nav>
     </header>
 
     <!-- MAIN CONTENT -->
     <main>
+        <!-- Visually hidden H1 for SEO -->
+        <h1 class="visually-hidden">RooMates - Find Affordable Hostels & Roommates in Ghana</h1>
+
         <!-- Search & Carousel Container -->
         <div class="content-wrapper">
             <!-- SEARCH FILTER -->
             <section class="search-filter">
                 <h2>Find a Hostel</h2>
                 <label for="location">Location</label>
-                <input type="text" id="location" placeholder="Enter city or area" />
+                <select id="location">
+                    <option value="" selected disabled>Select</option>
+                    <option value="north-campus">North Campus</option>
+                    <option value="central-campus">Central Campus</option>
+                    <option value="south-campus">South Campus</option>
+                </select>
                 <!-- Price Range: Two separate inputs for min and max -->
                 <label>Price Range</label>
                 <div class="price-range-wrapper">
@@ -379,84 +424,87 @@
                 </div>
                 <label for="room-type">Room Type</label>
                 <select id="room-type">
-                    <option value="">Select</option>
-                    <option value="single">Single</option>
-                    <option value="double">Double</option>
-                    <option value="shared">Shared</option>
+                    <option value="" selected disabled>Select</option>
+                    <option value="single">One in a Room</option>
+                    <option value="double">Two in a Room</option>
+                    <option value="three">Three in a Room</option>
+                    <option value="four">Four in a Room</option>
+                    <option value="five">Five in a Room</option>
+                    <option value="six">Six in a Room</option>
                 </select>
                 <button id="searchBtn">Search</button>
             </section>
 
             <!-- ADS CAROUSEL -->
             <section class="ads-carousel">
-                <button class="carousel-btn prev-btn">&#10094;</button>
+                <button class="carousel-btn prev-btn" aria-label="Previous Ad">&#10094;</button>
                 <div class="carousel-slide" id="carouselSlide">
                     <!-- Replace these images with your ad images -->
-                    <img src="images/campaign/1.webp" alt="Ad 1">
-                    <img src="images/campaign/2.webp" alt="Ad 2">
-                    <img src="images/campaign/3.webp" alt="Ad 3">
-                    <img src="images/campaign/4.webp" alt="Ad 4">
+                    <img src="images/campaign/1.webp" alt="Ad 1" />
+                    <img src="images/campaign/2.webp" alt="Ad 2" />
+                    <img src="images/campaign/3.webp" alt="Ad 3" />
+                    <img src="images/campaign/4.webp" alt="Ad 4" />
                 </div>
-                <button class="carousel-btn next-btn">&#10095;</button>
+                <button class="carousel-btn next-btn" aria-label="Next Ad">&#10095;</button>
             </section>
         </div>
 
         <!-- HOSTEL LISTINGS (MASONRY LAYOUT) -->
         <section class="hostel-listings">
             <!-- Sample hostel cards (duplicate or dynamically generate as needed) -->
-            <div class="hostel-card">
-                <img src="images/hostel/1.webp" alt="Hostel Image">
+            <article class="hostel-card">
+                <img src="images/hostel/1.webp" alt="Sunrise Hostel - Downtown" />
                 <div class="hostel-card-content">
                     <h3>Sunrise Hostel</h3>
                     <p>Location: Downtown</p>
                     <p>Price: $250/month</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="hostel-card">
-                <img src="images/hostel/2.webp" alt="Hostel Image">
+            <article class="hostel-card">
+                <img src="images/hostel/2.webp" alt="City View Hostel - City Center" />
                 <div class="hostel-card-content">
                     <h3>City View Hostel</h3>
                     <p>Location: City Center</p>
                     <p>Price: $300/month</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="hostel-card">
-                <img src="images/hostel/3.webp" alt="Hostel Image">
+            <article class="hostel-card">
+                <img src="images/hostel/3.webp" alt="Green Garden Hostel - Suburb" />
                 <div class="hostel-card-content">
                     <h3>Green Garden Hostel</h3>
                     <p>Location: Suburb</p>
                     <p>Price: $200/month</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="hostel-card">
-                <img src="images/hostel/4.webp" alt="Hostel Image">
+            <article class="hostel-card">
+                <img src="images/hostel/4.webp" alt="Green Garden Hostel - Suburb" />
                 <div class="hostel-card-content">
                     <h3>Green Garden Hostel</h3>
                     <p>Location: Suburb</p>
                     <p>Price: $200/month</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="hostel-card">
-                <img src="images/hostel/2.webp" alt="Hostel Image">
+            <article class="hostel-card">
+                <img src="images/hostel/2.webp" alt="City View Hostel - City Center" />
                 <div class="hostel-card-content">
                     <h3>City View Hostel</h3>
                     <p>Location: City Center</p>
                     <p>Price: $300/month</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="hostel-card">
-                <img src="images/hostel/1.webp" alt="Hostel Image">
+            <article class="hostel-card">
+                <img src="images/hostel/1.webp" alt="Sunrise Hostel - Downtown" />
                 <div class="hostel-card-content">
                     <h3>Sunrise Hostel</h3>
                     <p>Location: Downtown</p>
                     <p>Price: $250/month</p>
                 </div>
-            </div>
+            </article>
         </section>
     </main>
 
@@ -464,7 +512,7 @@
     <footer>
         <!-- Decorative footer image on top -->
         <div class="footer-top">
-            <img src="images/footer-ghana-new-2.svg" alt="Footer Ghana">
+            <img src="images/footer-ghana-new-2.svg" alt="Ghana Decorative Footer" />
         </div>
         <div class="footer-container">
             <div class="footer-section">
@@ -493,9 +541,9 @@
             <div class="footer-section social">
                 <h3>Follow Us</h3>
                 <ul>
-                    <li><a href="#"><img src="images/icons/facebook.svg" alt="Facebook"></a></li>
-                    <li><a href="#"><img src="images/icons/twitter.svg" alt="Twitter"></a></li>
-                    <li><a href="#"><img src="images/icons/instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="images/icons/facebook.svg" alt="Facebook" /></a></li>
+                    <li><a href="#"><img src="images/icons/twitter.svg" alt="Twitter" /></a></li>
+                    <li><a href="#"><img src="images/icons/instagram.svg" alt="Instagram" /></a></li>
                 </ul>
             </div>
         </div>
