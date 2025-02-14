@@ -187,6 +187,41 @@
             right: 10px;
         }
 
+
+        .gallery {
+            column-count: 3;
+            column-gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .gallery-item {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            width: 95%;
+            margin: 0 0 20px 0;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .details {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .details p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
         /* ------------------------------
        HOSTEL LISTINGS
     --------------------------------*/
@@ -265,6 +300,10 @@
             .ads-carousel {
                 flex: 1 1 100%;
             }
+
+            .gallery {
+                column-count: 2;
+            }
         }
     </style>
 </head>
@@ -326,63 +365,46 @@
                 <button class="carousel-btn next-btn">&#10095;</button>
             </section>
         </div>
-
-        <!-- HOSTEL LISTINGS -->
-        <section class="hostel-listings">
-            <!-- Sample hostel cards (duplicate or dynamically generate as needed) -->
-            <div class="hostel-card">
-                <img src="images/hostel/1.webp" alt="Hostel Image">
-                <div class="hostel-card-content">
-                    <h3>Sunrise Hostel</h3>
-                    <p>Location: Downtown</p>
-                    <p>Price: $250/month</p>
+        <section id="portfolio" class="portfolio">
+            <h2 style="text-align: center;">Portfolio</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/hostel/1.webp" alt="Pieta">
+                    <div class="hostel-card-content">
+                        <h3>City View Hostel</h3>
+                        <p>Location: City Center</p>
+                        <p>Price: $300/month</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="hostel-card">
-                <img src="images/hostel/2.webp" alt="Hostel Image">
-                <div class="hostel-card-content">
-                    <h3>City View Hostel</h3>
-                    <p>Location: City Center</p>
-                    <p>Price: $300/month</p>
+                <div class="gallery-item">
+                    <img src="images/hostel/2.webp" alt="Pieta">
+                    <div class="hostel-card-content">
+                        <h3>City View Hostel</h3>
+                        <p>Location: City Center</p>
+                        <p>Price: $300/month</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="hostel-card">
-                <img src="images/hostel/3.webp" alt="Hostel Image">
-                <div class="hostel-card-content">
-                    <h3>Green Garden Hostel</h3>
-                    <p>Location: Suburb</p>
-                    <p>Price: $200/month</p>
+                <div class="gallery-item">
+                    <img src="images/hostel/3.webp" alt="Pieta">
+                    <div class="hostel-card-content">
+                        <h3>City View Hostel</h3>
+                        <p>Location: City Center</p>
+                        <p>Price: $300/month</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="hostel-card">
-                <img src="images/hostel/4.webp" alt="Hostel Image">
-                <div class="hostel-card-content">
-                    <h3>Green Garden Hostel</h3>
-                    <p>Location: Suburb</p>
-                    <p>Price: $200/month</p>
-                </div>
-            </div>
-
-            <div class="hostel-card">
-                <img src="images/hostel/2.webp" alt="Hostel Image">
-                <div class="hostel-card-content">
-                    <h3>City View Hostel</h3>
-                    <p>Location: City Center</p>
-                    <p>Price: $300/month</p>
-                </div>
-            </div>
-
-            <div class="hostel-card">
-                <img src="images/hostel/1.webp" alt="Hostel Image">
-                <div class="hostel-card-content">
-                    <h3>Sunrise Hostel</h3>
-                    <p>Location: Downtown</p>
-                    <p>Price: $250/month</p>
+                <div class="gallery-item">
+                    <img src="images/hostel/4.webp" alt="Pieta">
+                    <div class="hostel-card-content">
+                        <h3>City View Hostel</h3>
+                        <p>Location: City Center</p>
+                        <p>Price: $300/month</p>
+                    </div>
                 </div>
         </section>
+
     </main>
 
     <!-- SIMPLE CAROUSEL SCRIPT -->
