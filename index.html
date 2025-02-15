@@ -109,7 +109,7 @@
                 <img src="images/hostel/1.webp" alt="Sunrise Hostel - Downtown" />
                 <div class="hostel-card-content">
                     <h3>Sunrise Hostel</h3>
-                    <p>Location: Downtown</p>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
                     <p>Price: $250/month</p>
                 </div>
             </article>
@@ -213,12 +213,8 @@
     <script>
         AOS.init({
             duration: 900,
+            once: false
 
-            // Disable animations on phones (≤ 768px width)
-            disable: 'mobile', // Built-in mobile detection
-
-            // OR disable for tablets too:
-            disable: 'phone', // 'mobile', 'phone', 'tablet', or custom query
         });
 
     </script>
