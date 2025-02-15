@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hostel Details - RooMates</title>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pIFJRA7aMlHuTrpZ84IFN03m2cRjJR2zBU9H/wTRojN/3w2UE69c5yp8ZK0Ixppzz7e4wA6fFhpgsErL12O5pg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS Library CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-pFjz2xZlNQnK1uMghR9xU5o+E1xC3iyb72KfiN9dYQghzJxD6JZp7+ae8+Wn4I6sjc6k2E8bP1Qelqnc8+Z3BA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/home-details.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<script>
+    const hamburger = document.getElementById('hamburger');
+
+    const navLinks = document.getElementById('nav-links');
+
+    const links = navLinks.querySelectorAll('li a'); // Select all navigation links
+
+
+
+    hamburger.addEventListener('click', () => {
+
+        navLinks.classList.toggle('active');
+
+    });
+
+
+
+    // Close the hamburger menu when a nav link is clicked
+
+    links.forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            navLinks.classList.remove('active'); // Remove the active class to close the menu
+
+        });
+
+    });
+</script>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <!-- Replace with your actual logo path -->
+            <img src="images/logo.png" alt="RooMates Logo" />
+        </div>
+        <nav>
+
+            <ul id="nav-links" class="nav-links">
+
+                <li><a href="login.html">Login</a></li>
+
+                <li><a href="signup.html">Sign Up</a></li>
+
+
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+        </nav>
+    </header>
+    <div class="container">
+
+
+        <!-- Top Section: Image Slider and Agent Details -->
+        <section class="top-section" data-aos="fade-up">
+            <!-- Image Slider -->
+            <div class="slider-container" data-aos="fade-right">
+                <div class="slider">
+                    <img src="images/hostel/4.webp" alt="Hostel Image 1" class="active">
+                    <img src="images/hostel/2.webp" alt="Hostel Image 2">
+                    <img src="images/hostel/3.webp" alt="Hostel Image 3">
+                    <!-- Add more images as needed -->
+                </div>
+                <!-- Manual Slider Controls -->
+                <button class="slider-btn prev-btn" aria-label="Previous Image"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn" aria-label="Next Image"><i
+                        class="fas fa-chevron-right"></i></button>
+                <!-- Book Now Button -->
+                <button class="book-btn" data-aos="zoom-in"><i class="fas fa-book"></i> Book Now</button>
+            </div>
+            <!-- Agent/Owner Details -->
+            <div class="agent-details" data-aos="fade-left">
+                <img src="images/agent/profile.webp" alt="Agent Profile Picture">
+                <h3>Jane Doe</h3>
+                <p><i class="fas fa-phone"></i> +233 123 4567</p>
+                <p><i class="fas fa-envelope"></i> jane.doe@example.com</p>
+                <p>Status: <span class="verified"><i class="fas fa-check-circle"></i> Verified</span></p>
+            </div>
+        </section>
+
+        <!-- Hostel Information Section -->
+        <section class="hostel-info" data-aos="fade-up">
+            <h2>Sunrise Hostel</h2>
+            <p class="price"><i class="fas fa-dollar-sign"></i> $250 - $300/month</p>
+            <div class="amenities">
+                <strong>Amenities:</strong>
+                <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+                <span><i class="fas fa-shower"></i> Shower</span>
+                <span><i class="fas fa-utensils"></i> Kitchen</span>
+                <!-- Add more amenities as needed -->
+            </div>
+            <div class="proximity">
+                <strong>Proximity:</strong>
+                <span><i class="fas fa-map-marker-alt"></i> 50m from campus</span>
+            </div>
+        </section>
+
+        <!-- Hostel Suggestions Section -->
+        <section class="suggestions" data-aos="fade-up">
+            <!-- Example Suggestion Cards -->
+            <div class="suggestion-card">
+                <img src="images/hostel/1.webp" alt="Suggested Hostel 1">
+                <div class="card-content">
+                    <h4>Sunrise Hostel</h4>
+                    <p><i class="fas fa-dollar-sign"></i> $250/month</p>
+                </div>
+            </div>
+            <div class="suggestion-card">
+                <img src="images/hostel/2.webp" alt="Suggested Hostel 2">
+                <div class="card-content">
+                    <h4>City View Hostel</h4>
+                    <p><i class="fas fa-dollar-sign"></i> $300/month</p>
+                </div>
+            </div>
+            <div class="suggestion-card">
+                <img src="images/hostel/3.webp" alt="Suggested Hostel 3">
+                <div class="card-content">
+                    <h4>Green Garden Hostel</h4>
+                    <p><i class="fas fa-dollar-sign"></i> $200/month</p>
+                </div>
+            </div>
+            <!-- Add more suggestion cards as needed -->
+        </section>
+    </div>
+
+    <!-- FontAwesome JS (only one instance if needed) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+        integrity="sha512-3LCgMZoi7/ThCw5Mu3SFFxtAw4LhN38dZCYyY7SdKtS9M2f3n2ubvSNxJ5I/w8wJ/Cpc66ZXsK+z/5+Rf2s8Mw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- AOS Library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-GtFHYz6KkmGu42J8xRygSgG2ORyw68yeOUgFDuV4azV8cxJQWVvDguUM9V50GTRR57z1q/TU6eHyu8F0Q3zF2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Manual Slider Functionality (manual navigation only)
+        const sliderImages = document.querySelectorAll('.slider img');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentSlide = 0;
+        const totalSlides = sliderImages.length;
+
+        function showSlide(index) {
+            sliderImages.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+
+</html>
