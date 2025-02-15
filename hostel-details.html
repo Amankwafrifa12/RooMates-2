@@ -6,46 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hostel Details - RooMates</title>
     <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-pIFJRA7aMlHuTrpZ84IFN03m2cRjJR2zBU9H/wTRojN/3w2UE69c5yp8ZK0Ixppzz7e4wA6fFhpgsErL12O5pg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-0B...==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- AOS Library CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-        integrity="sha512-pFjz2xZlNQnK1uMghR9xU5o+E1xC3iyb72KfiN9dYQghzJxD6JZp7+ae8+Wn4I6sjc6k2E8bP1Qelqnc8+Z3BA=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-pF...=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/home-details.css">
     <link rel="stylesheet" href="css/main.css">
+
 </head>
-<script>
-    const hamburger = document.getElementById('hamburger');
-
-    const navLinks = document.getElementById('nav-links');
-
-    const links = navLinks.querySelectorAll('li a'); // Select all navigation links
-
-
-
-    hamburger.addEventListener('click', () => {
-
-        navLinks.classList.toggle('active');
-
-    });
-
-
-
-    // Close the hamburger menu when a nav link is clicked
-
-    links.forEach(link => {
-
-        link.addEventListener('click', () => {
-
-            navLinks.classList.remove('active'); // Remove the active class to close the menu
-
-        });
-
-    });
-</script>
 
 <body>
     <!-- HEADER -->
@@ -61,20 +31,7 @@
                 <li><a href="login.html">Login</a></li>
 
                 <li><a href="signup.html">Sign Up</a></li>
-
-
             </ul>
-
-            <div class="hamburger" id="hamburger">
-
-                <span></span>
-
-                <span></span>
-
-                <span></span>
-
-            </div>
-
         </nav>
     </header>
     <div class="container">
@@ -153,43 +110,36 @@
         </section>
     </div>
 
-    <!-- FontAwesome JS (only one instance if needed) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
-        integrity="sha512-3LCgMZoi7/ThCw5Mu3SFFxtAw4LhN38dZCYyY7SdKtS9M2f3n2ubvSNxJ5I/w8wJ/Cpc66ZXsK+z/5+Rf2s8Mw=="
+    <!-- FontAwesome JS (optional if needed for dynamic icons) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-..."
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- AOS Library JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-        integrity="sha512-GtFHYz6KkmGu42J8xRygSgG2ORyw68yeOUgFDuV4azV8cxJQWVvDguUM9V50GTRR57z1q/TU6eHyu8F0Q3zF2g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-..." crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
     <script>
         AOS.init({
-            duration: 800,
-            once: true
+            duration: 900,
+            once: false
         });
 
-        // Manual Slider Functionality (manual navigation only)
-        const sliderImages = document.querySelectorAll('.slider img');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
+        // Simple slider functionality
         let currentSlide = 0;
+        const sliderImages = document.querySelectorAll('.slider img');
         const totalSlides = sliderImages.length;
 
         function showSlide(index) {
             sliderImages.forEach((img, i) => {
-                img.classList.toggle('active', i === index);
+                img.style.display = (i === index) ? 'block' : 'none';
             });
         }
 
-        prevBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlide);
-        });
-
-        nextBtn.addEventListener('click', () => {
+        // Auto-play slider every 4 seconds
+        setInterval(() => {
             currentSlide = (currentSlide + 1) % totalSlides;
             showSlide(currentSlide);
-        });
+        }, 4000);
     </script>
+
 </body>
 
 </html>

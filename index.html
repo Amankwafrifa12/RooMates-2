@@ -24,7 +24,10 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- AOS Library CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-pF...=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -64,7 +67,7 @@
         <h1 class="visually-hidden">RooMates - Find Affordable Hostels & Roommates in Ghana</h1>
 
         <!-- Search & Carousel Container -->
-        <div class="content-wrapper">
+        <div class="content-wrapper" data-aos="fade-down" data-aos-once="false">
             <!-- SEARCH FILTER -->
             <section class="search-filter">
                 <h2>Find a Hostel</h2>
@@ -96,7 +99,7 @@
 
             <!-- ADS CAROUSEL -->
             <section class="ads-carousel">
-                <button class="carousel-btn prev-btn" aria-label="Previous Ad">&#10094;</button>
+
                 <div class="carousel-slide" id="carouselSlide">
                     <!-- Replace these images with your ad images -->
                     <img src="images/campaign/1.webp" alt="Ad 1" />
@@ -104,12 +107,12 @@
                     <img src="images/campaign/3.webp" alt="Ad 3" />
                     <img src="images/campaign/4.webp" alt="Ad 4" />
                 </div>
-                <button class="carousel-btn next-btn" aria-label="Next Ad">&#10095;</button>
+
             </section>
         </div>
 
         <!-- HOSTEL LISTINGS (MASONRY LAYOUT) -->
-        <section class="hostel-listings">
+        <section class="hostel-listings" data-aos="fade-up" data-aos-once="false">
             <!-- Sample hostel cards (duplicate or dynamically generate as needed) -->
             <article class="hostel-card">
                 <img src="images/hostel/1.webp" alt="Sunrise Hostel - Downtown" />
@@ -124,7 +127,7 @@
                 <img src="images/hostel/2.webp" alt="City View Hostel - City Center" />
                 <div class="hostel-card-content">
                     <h3>City View Hostel</h3>
-                    <p>Location: City Center</p>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
                     <p>Price: $300/month</p>
                 </div>
             </article>
@@ -133,7 +136,7 @@
                 <img src="images/hostel/3.webp" alt="Green Garden Hostel - Suburb" />
                 <div class="hostel-card-content">
                     <h3>Green Garden Hostel</h3>
-                    <p>Location: Suburb</p>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
                     <p>Price: $200/month</p>
                 </div>
             </article>
@@ -142,7 +145,7 @@
                 <img src="images/hostel/4.webp" alt="Green Garden Hostel - Suburb" />
                 <div class="hostel-card-content">
                     <h3>Green Garden Hostel</h3>
-                    <p>Location: Suburb</p>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
                     <p>Price: $200/month</p>
                 </div>
             </article>
@@ -151,7 +154,7 @@
                 <img src="images/hostel/2.webp" alt="City View Hostel - City Center" />
                 <div class="hostel-card-content">
                     <h3>City View Hostel</h3>
-                    <p>Location: City Center</p>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
                     <p>Price: $300/month</p>
                 </div>
             </article>
@@ -160,7 +163,7 @@
                 <img src="images/hostel/1.webp" alt="Sunrise Hostel - Downtown" />
                 <div class="hostel-card-content">
                     <h3>Sunrise Hostel</h3>
-                    <p>Location: Downtown</p>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
                     <p>Price: $250/month</p>
                 </div>
             </article>
@@ -200,9 +203,9 @@
             <div class="footer-section social">
                 <h3>Follow Us</h3>
                 <ul>
-                    <li><a href="#"><img src="images/icons/facebook.svg" alt="Facebook" /></a></li>
-                    <li><a href="#"><img src="images/icons/twitter.svg" alt="Twitter" /></a></li>
-                    <li><a href="#"><img src="images/icons/instagram.svg" alt="Instagram" /></a></li>
+                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-x-twitter"></i> </a></li>
                 </ul>
             </div>
         </div>
@@ -210,7 +213,24 @@
             <p>&copy; 2025 RooMates. All rights reserved.</p>
         </div>
     </footer>
+    <!-- FontAwesome JS (optional if needed for dynamic icons) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-..."
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- AOS Library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-..." crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init({
+            duration: 900,
 
+            // Disable animations on phones (≤ 768px width)
+            disable: 'mobile', // Built-in mobile detection
+
+            // OR disable for tablets too:
+            disable: 'phone', // 'mobile', 'phone', 'tablet', or custom query
+        });
+
+    </script>
     <!-- SIMPLE CAROUSEL SCRIPT -->
     <script>
         const carouselSlide = document.getElementById('carouselSlide');

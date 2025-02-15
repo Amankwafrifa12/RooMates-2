@@ -49,17 +49,7 @@ header {
     width: auto;
 }
 
-.header-buttons a {
-    margin-left: 1rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: opacity 0.3s;
-}
 
-.header-buttons a:hover {
-    opacity: 0.8;
-}
 
 .container {
     max-width: 1200px;
