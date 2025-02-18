@@ -14,7 +14,7 @@
     <link rel="canonical" href="https://www.roomates.com/" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="RooMates - Find Affordable Hostels & Roommates in Ghana" />
+    <meta property="og:title" content="RooMates - Find Affordable Hostels & Roommates in Winneba" />
     <meta property="og:description"
         content="Search for affordable hostels and find the best roommate options in Winneba with RooMates." />
     <meta property="og:image" content="https://www.roomates.com/images/logo.png" />
@@ -111,7 +111,7 @@
                 <div class="hostel-card-content">
                     <h3>Sunrise Hostel</h3>
                     <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: $250/month</p>
+                    <p>Price: <span>&#8373;</span>250/month</p>
                 </div>
             </article>
 
@@ -120,7 +120,7 @@
                 <div class="hostel-card-content">
                     <h3>City View Hostel</h3>
                     <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: $300/month</p>
+                    <p>Price: <span>&#8373;</span>300/month</p>
                 </div>
             </article>
 
@@ -129,7 +129,7 @@
                 <div class="hostel-card-content">
                     <h3>Green Garden Hostel</h3>
                     <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: $200/month</p>
+                    <p>Price: <span>&#8373;</span>200/month</p>
                 </div>
             </article>
 
@@ -138,7 +138,7 @@
                 <div class="hostel-card-content">
                     <h3>Green Garden Hostel</h3>
                     <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: $200/month</p>
+                    <p>Price: <span>&#8373;</span>200/month</p>
                 </div>
             </article>
 
@@ -147,7 +147,7 @@
                 <div class="hostel-card-content">
                     <h3>City View Hostel</h3>
                     <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: $300/month</p>
+                    <p>Price: <span>&#8373;</span>300/month</p>
                 </div>
             </article>
 
@@ -156,7 +156,7 @@
                 <div class="hostel-card-content">
                     <h3>Sunrise Hostel</h3>
                     <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: $250/month</p>
+                    <p>Price: <span>&#8373;</span>250/month</p>
                 </div>
             </article>
         </section>
@@ -230,20 +230,20 @@
         const size = carouselImages[0].clientWidth;
 
         // Show the first image initially
-        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+        carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
 
         // Next button
         nextBtn.addEventListener('click', () => {
             if (counter >= carouselImages.length - 1) return;
             counter++;
-            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+            carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
         });
 
         // Prev button
         prevBtn.addEventListener('click', () => {
             if (counter <= 0) return;
             counter--;
-            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+            carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
         });
 
         // Optional auto-play
@@ -252,7 +252,7 @@
                 counter = -1;
             }
             counter++;
-            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+            carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
         }, 4000);
     </script>
 </body>
