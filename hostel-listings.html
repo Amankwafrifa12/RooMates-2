@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RooMates - Find Affordable Hostels & Roommates in Winneba</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="RooMates is your premier platform to search for affordable hostels and find roommates in Winneba. Filter by location, price range, and room type to discover your perfect living arrangement." />
+    <meta name="keywords" content="hostels, roommates, Ghana, Winneba, affordable hostels, student housing, RooMates" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.roomates.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="RooMates - Find Affordable Hostels & Roommates in Winneba" />
+    <meta property="og:description"
+        content="Search for affordable hostels and find the best roommate options in Winneba with RooMates." />
+    <meta property="og:image" content="https://www.roomates.com/images/logo.png" />
+    <meta property="og:url" content="https://www.roomates.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="css/hostel-details.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- AOS Library CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-pF...=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <!-- Replace with your actual logo path -->
+            <img src="images/logo.png" alt="RooMates Logo" />
+        </div>
+        <nav>
+
+            <ul id="nav-links" class="nav-links">
+
+                <li><a href="login.html">Login</a></li>
+
+                <li><a href="signup.html">Sign Up</a></li>
+
+
+            </ul>
+
+
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- Visually hidden H1 for SEO -->
+        <h1 class="visually-hidden">RooMates - Find Affordable Hostels & Roommates in Ghana</h1>
+
+        <!-- Search & Carousel Container -->
+        <div class="content-wrapper" data-aos="fade-down" data-aos-once="false">
+            <!-- SEARCH FILTER -->
+            <section class="search-filter">
+                <h2>Find a Hostel</h2>
+                <label for="location">Location</label>
+                <select id="location">
+                    <option value="" selected disabled>Select</option>
+                    <option value="north-campus">North Campus</option>
+                    <option value="central-campus">Central Campus</option>
+                    <option value="south-campus">South Campus</option>
+                </select>
+                <!-- Price Range: Two separate inputs for min and max -->
+                <label>Price Range</label>
+                <div class="price-range-wrapper">
+                    <input type="number" id="min-price" placeholder="Min" />
+                    <input type="number" id="max-price" placeholder="Max" />
+                </div>
+                <label for="room-type">Room Type</label>
+                <select id="room-type">
+                    <option value="" selected disabled>Select</option>
+                    <option value="single">One in a Room</option>
+                    <option value="double">Two in a Room</option>
+                    <option value="three">Three in a Room</option>
+                    <option value="four">Four in a Room</option>
+                    <option value="five">Five in a Room</option>
+                    <option value="six">Six in a Room</option>
+                </select>
+                <button id="searchBtn">Search</button>
+            </section>
+
+            <!-- ADS CAROUSEL -->
+            <section class="ads-carousel">
+
+                <div class="carousel-slide" id="carouselSlide">
+                    <!-- Replace these images with your ad images -->
+                    <img src="images/campaign/1.webp" alt="Ad 1" />
+                    <img src="images/campaign/2.webp" alt="Ad 2" />
+                    <img src="images/campaign/3.webp" alt="Ad 3" />
+                    <img src="images/campaign/4.webp" alt="Ad 4" />
+                </div>
+
+            </section>
+        </div>
+
+        <!-- HOSTEL LISTINGS (MASONRY LAYOUT) -->
+        <section class="hostel-listings" data-aos="fade-up" data-aos-once="false">
+            <!-- Sample hostel cards (duplicate or dynamically generate as needed) -->
+            <article class="hostel-card">
+                <img src="images/hostel/1.webp" alt="Sunrise Hostel - Downtown" />
+                <div class="hostel-card-content">
+                    <h3>Sunrise Hostel</h3>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
+                    <p>Price: <span>&#8373;</span>250/month</p>
+                </div>
+            </article>
+
+            <article class="hostel-card">
+                <img src="images/hostel/2.webp" alt="City View Hostel - City Center" />
+                <div class="hostel-card-content">
+                    <h3>City View Hostel</h3>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
+                    <p>Price: <span>&#8373;</span>300/month</p>
+                </div>
+            </article>
+
+            <article class="hostel-card">
+                <img src="images/hostel/3.webp" alt="Green Garden Hostel - Suburb" />
+                <div class="hostel-card-content">
+                    <h3>Green Garden Hostel</h3>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
+                    <p>Price: <span>&#8373;</span>200/month</p>
+                </div>
+            </article>
+
+            <article class="hostel-card">
+                <img src="images/hostel/4.webp" alt="Green Garden Hostel - Suburb" />
+                <div class="hostel-card-content">
+                    <h3>Green Garden Hostel</h3>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
+                    <p>Price: <span>&#8373;</span>200/month</p>
+                </div>
+            </article>
+
+            <article class="hostel-card">
+                <img src="images/hostel/2.webp" alt="City View Hostel - City Center" />
+                <div class="hostel-card-content">
+                    <h3>City View Hostel</h3>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
+                    <p>Price: <span>&#8373;</span>300/month</p>
+                </div>
+            </article>
+
+            <article class="hostel-card">
+                <img src="images/hostel/1.webp" alt="Sunrise Hostel - Downtown" />
+                <div class="hostel-card-content">
+                    <h3>Sunrise Hostel</h3>
+                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
+                    <p>Price: <span>&#8373;</span>250/month</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER (Inspired by Jiji.com.gh) -->
+    <footer>
+        <!-- Decorative footer image on top -->
+        <div class="footer-top">
+            <img src="images/footer-ghana-new-2.svg" alt="Ghana Decorative Footer" />
+        </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About RooMates</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-x-twitter"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RooMates. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- FontAwesome JS (optional if needed for dynamic icons) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-..."
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- AOS Library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-..." crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            once: false
+
+        });
+
+    </script>
+    <!-- SIMPLE CAROUSEL SCRIPT -->
+    <script>
+        const carouselSlide = document.getElementById('carouselSlide');
+        const carouselImages = carouselSlide.querySelectorAll('img');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let counter = 0;
+        const size = carouselImages[0].clientWidth;
+
+        // Show the first image initially
+        carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
+
+        // Next button
+        nextBtn.addEventListener('click', () => {
+            if (counter >= carouselImages.length - 1) return;
+            counter++;
+            carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
+        });
+
+        // Prev button
+        prevBtn.addEventListener('click', () => {
+            if (counter <= 0) return;
+            counter--;
+            carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
+        });
+
+        // Optional auto-play
+        setInterval(() => {
+            if (counter >= carouselImages.length - 1) {
+                counter = -1;
+            }
+            counter++;
+            carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
+        }, 4000);
+    </script>
+</body>
+
+</html>
