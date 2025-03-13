@@ -29,6 +29,8 @@
     <!-- AOS Library CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-pF...=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Additional styling for checkbox fields -->
+
 </head>
 
 <body>
@@ -39,17 +41,10 @@
             <img src="images/logo.png" alt="RooMates Logo" />
         </div>
         <nav>
-
             <ul id="nav-links" class="nav-links">
-
                 <li><a href="login.html">Login</a></li>
-
                 <li><a href="signup.html">Sign Up</a></li>
-
-
             </ul>
-
-
         </nav>
     </header>
 
@@ -86,78 +81,99 @@
                     <option value="five">Five in a Room</option>
                     <option value="six">Six in a Room</option>
                 </select>
-                <button id="searchBtn">Search</button>
+                <!-- Styled filter fields for Water Bill and Light Bill as checkboxes -->
+                <div class="bills">
+                    <div class="checkbox-field" style="margin-right: 20px;">
+                        <label for="water-bill">Water Bill</label>
+                        <input type="checkbox" id="water-bill" />
+                    </div>
+                    <div class="checkbox-field">
+                        <label for="light-bill">Light Bill</label>
+                        <input type="checkbox" id="light-bill" />
+                    </div>
+
+                </div>
+                <button id="searchBtn">Filter</button>
+                <button id="resetBtn" type="button">Reset</button>
             </section>
 
             <!-- ADS CAROUSEL -->
             <section class="ads-carousel">
-
                 <div class="carousel-slide" id="carouselSlide">
                     <!-- Replace these images with your ad images -->
                     <img src="images/campaign/RooMates-3.gif" alt="Ad 1" />
-
                 </div>
-
             </section>
         </div>
 
         <!-- HOSTEL LISTINGS (MASONRY LAYOUT) -->
         <section class="hostel-listings" data-aos="fade-up" data-aos-once="false">
             <!-- Sample hostel cards (duplicate or dynamically generate as needed) -->
-            <article class="hostel-card">
-                <img src="images/hostel/1.webp" alt="Sunrise Hostel - Downtown" />
+            <article class="hostel-card" data-location="north-campus" data-min-price="2500" data-max-price="5200"
+                data-room-type="double" data-water-bill="yes" data-light-bill="no">
+                <img src="images/hostel/hostel (1).jpg" alt="Sunrise Hostel - North Campus" />
                 <div class="hostel-card-content">
-                    <h3>Sunrise Hostel</h3>
-                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: <span>&#8373;</span>250/month</p>
+                    <p><i class="fas fa-map"></i> North Campus</p>
+                    <p>Price: GH₵2500 - GH₵5200</p>
                 </div>
             </article>
 
-            <article class="hostel-card">
-                <img src="images/hostel/2.webp" alt="City View Hostel - City Center" />
+            <article class="hostel-card" data-location="north-campus" data-min-price="3000" data-max-price="5200"
+                data-room-type="single" data-water-bill="no" data-light-bill="yes">
+                <img src="images/hostel/hostel (2).jpg" alt="City View Hostel - City Center" />
                 <div class="hostel-card-content">
-                    <h3>City View Hostel</h3>
-                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: <span>&#8373;</span>300/month</p>
+                    <p><i class="fas fa-map"></i> North Campus <span><i class="fas fa-map-marker-alt"></i> 50m</span>
+                    </p>
+                    <p>Price: <span>&#8373;</span>3000 - <span>&#8373;</span>5200</p>
                 </div>
             </article>
 
-            <article class="hostel-card">
-                <img src="images/hostel/3.webp" alt="Green Garden Hostel - Suburb" />
+            <article class="hostel-card" data-location="south-campus" data-min-price="2500" data-max-price="6000"
+                data-room-type="single" data-water-bill="yes" data-light-bill="yes">
+                <img src="images/hostel/hostel (3).jpg" alt="Green Garden Hostel - South Campus" />
                 <div class="hostel-card-content">
-                    <h3>Green Garden Hostel</h3>
-                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: <span>&#8373;</span>200/month</p>
+                    <p><i class="fas fa-map"></i> South Campus <span><i class="fas fa-map-marker-alt"></i> 50m</span>
+                    </p>
+                    <p>Price: <span>&#8373;</span>2500 - <span>&#8373;</span>6000</p>
                 </div>
             </article>
 
-            <article class="hostel-card">
-                <img src="images/hostel/4.webp" alt="Green Garden Hostel - Suburb" />
+            <article class="hostel-card" data-location="central-campus" data-min-price="2000" data-max-price="4200"
+                data-room-type="single" data-water-bill="yes" data-light-bill="yes">
+                <img src="images/hostel/hostel (4).jpg" alt="Green Garden Hostel - Central Campus" />
                 <div class="hostel-card-content">
-                    <h3>Green Garden Hostel</h3>
-                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: <span>&#8373;</span>200/month</p>
+                    <p><i class="fas fa-map"></i> Central Campus <span><i class="fas fa-map-marker-alt"></i> 50m</span>
+                    </p>
+                    <p>Price: <span>&#8373;</span>2000 - <span>&#8373;</span>4200</p>
                 </div>
             </article>
 
-            <article class="hostel-card">
-                <img src="images/hostel/2.webp" alt="City View Hostel - City Center" />
+            <article class="hostel-card" data-location="central-campus" data-min-price="3300" data-max-price="5200"
+                data-room-type="double" data-water-bill="no" data-light-bill="yes">
+                <img src="images/hostel/hostel (5).jpg" alt="City View Hostel - City Center" />
                 <div class="hostel-card-content">
-                    <h3>City View Hostel</h3>
-                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: <span>&#8373;</span>300/month</p>
+                    <p><i class="fas fa-map"></i> Central Campus <span><i class="fas fa-map-marker-alt"></i> 50m</span>
+                    </p>
+                    <p>Price: <span>&#8373;</span>3300 - <span>&#8373;</span>5200</p>
                 </div>
             </article>
 
-            <article class="hostel-card">
-                <img src="images/hostel/1.webp" alt="Sunrise Hostel - Downtown" />
+            <article class="hostel-card" data-location="south-campus" data-min-price="1800" data-max-price="5200"
+                data-room-type="single" data-water-bill="yes" data-light-bill="no">
+                <img src="images/hostel/hostel (1).jpg" alt="Sunrise Hostel - Downtown" />
                 <div class="hostel-card-content">
-                    <h3>Sunrise Hostel</h3>
-                    <p><i class="fas fa-map"></i> Suburb <span><i class="fas fa-map-marker-alt"></i> 50m</span></p>
-                    <p>Price: <span>&#8373;</span>250/month</p>
+                    <p><i class="fas fa-map"></i> South Campus <span><i class="fas fa-map-marker-alt"></i> 50m</span>
+                    </p>
+                    <p>Price: <span>&#8373;</span>1800 - <span>&#8373;</span>5200</p>
                 </div>
             </article>
+
         </section>
+        <!-- No Results Message -->
+        <div id="noResults" style="display:none; align-items: center; margin-bottom: 20px; justify-content: center; ">
+            <i class="fas fa-info-circle" style="margin-right: 10px;"></i>
+            <p> No hostel was found</p>
+        </div>
     </main>
 
     <!-- FOOTER (Inspired by Jiji.com.gh) -->
@@ -171,8 +187,6 @@
                 <h3>About RooMates</h3>
                 <ul>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -213,9 +227,7 @@
         AOS.init({
             duration: 900,
             once: false
-
         });
-
     </script>
     <!-- SIMPLE CAROUSEL SCRIPT -->
     <script>
@@ -228,20 +240,20 @@
         const size = carouselImages[0].clientWidth;
 
         // Show the first image initially
-        carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
+        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
 
         // Next button
         nextBtn.addEventListener('click', () => {
             if (counter >= carouselImages.length - 1) return;
             counter++;
-            carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
+            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
         });
 
         // Prev button
         prevBtn.addEventListener('click', () => {
             if (counter <= 0) return;
             counter--;
-            carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
+            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
         });
 
         // Optional auto-play
@@ -250,8 +262,82 @@
                 counter = -1;
             }
             counter++;
-            carouselSlide.style.transform = `translateX(<span>&#8373;</span>{-size * counter}px)`;
+            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
         }, 4000);
+    </script>
+    <!-- SEARCH FILTER SCRIPT -->
+    <script>
+        document.getElementById('searchBtn').addEventListener('click', function () {
+            var locationFilter = document.getElementById('location').value;
+            var minPriceFilter = parseInt(document.getElementById('min-price').value);
+            var maxPriceFilter = parseInt(document.getElementById('max-price').value);
+            var roomTypeFilter = document.getElementById('room-type').value;
+            // For checkboxes, if checked then filter for "yes"
+            var waterBillFilter = document.getElementById('water-bill').checked;
+            var lightBillFilter = document.getElementById('light-bill').checked;
+
+            var hostelCards = document.querySelectorAll('.hostel-card');
+            var visibleCount = 0;
+
+            hostelCards.forEach(function (card) {
+                var cardLocation = card.getAttribute('data-location');
+                var cardMinPrice = parseInt(card.getAttribute('data-min-price'));
+                var cardMaxPrice = parseInt(card.getAttribute('data-max-price'));
+                var cardRoomType = card.getAttribute('data-room-type');
+                var cardWaterBill = card.getAttribute('data-water-bill');
+                var cardLightBill = card.getAttribute('data-light-bill');
+
+                var matches = true;
+
+                if (locationFilter && cardLocation !== locationFilter) {
+                    matches = false;
+                }
+                if (!isNaN(minPriceFilter) && cardMinPrice < minPriceFilter) {
+                    matches = false;
+                }
+                if (!isNaN(maxPriceFilter) && cardMaxPrice > maxPriceFilter) {
+                    matches = false;
+                }
+                if (roomTypeFilter) {
+                    if (cardRoomType.toLowerCase() !== roomTypeFilter.toLowerCase()) {
+                        matches = false;
+                    }
+                }
+                if (waterBillFilter && cardWaterBill !== 'yes') {
+                    matches = false;
+                }
+                if (lightBillFilter && cardLightBill !== 'yes') {
+                    matches = false;
+                }
+                if (matches) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show or hide the "No hostel was found" message
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'flex' : 'none';
+        });
+
+        // Reset button functionality
+        document.getElementById('resetBtn').addEventListener('click', function () {
+            // Reset all filters
+            document.getElementById('location').selectedIndex = 0;
+            document.getElementById('min-price').value = '';
+            document.getElementById('max-price').value = '';
+            document.getElementById('room-type').selectedIndex = 0;
+            document.getElementById('water-bill').checked = false;
+            document.getElementById('light-bill').checked = false;
+
+            // Show all hostel cards and hide the no-results message
+            var hostelCards = document.querySelectorAll('.hostel-card');
+            hostelCards.forEach(function (card) {
+                card.style.display = '';
+            });
+            document.getElementById('noResults').style.display = 'none';
+        });
     </script>
 </body>
 

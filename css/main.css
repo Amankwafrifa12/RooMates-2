@@ -219,6 +219,30 @@
      right: 10px;
  }
 
+ .checkbox-field {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     margin-bottom: 10px;
+ }
+
+ .checkbox-field input[type="checkbox"] {
+     width: 20px;
+     height: 20px;
+
+ }
+
+ .checkbox-field input[type="checkbox"]:checked {
+     accent-color: var(--primary-color);
+ }
+
+
+ .bills {
+     display: flex;
+     align-items: center;
+
+ }
  /* ------------------------------
        HOSTEL LISTINGS (MASONRY LAYOUT)
     --------------------------------*/

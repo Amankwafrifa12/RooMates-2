@@ -5,115 +5,169 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hostel Details - RooMates</title>
-    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-0B...==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- AOS Library CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-pF...=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="css/hostel-details.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
 
+    </style>
 </head>
 
 <body>
-    <!-- HEADER -->
     <header>
         <div class="logo-container">
-            <!-- Replace with your actual logo path -->
             <img src="images/logo.png" alt="RooMates Logo" />
         </div>
         <nav>
-
             <ul id="nav-links" class="nav-links">
-
                 <li><a href="login.html">Login</a></li>
-
                 <li><a href="signup.html">Sign Up</a></li>
             </ul>
         </nav>
     </header>
+
     <div class="container">
-
-
-        <!-- Top Section: Image Slider and Agent Details -->
         <section class="top-section" data-aos="fade-up">
-            <!-- Image Slider -->
             <div class="slider-container" data-aos="fade-right">
                 <div class="slider">
                     <img src="images/hostel/4.webp" alt="Hostel Image 1" class="active">
                     <img src="images/hostel/2.webp" alt="Hostel Image 2">
                     <img src="images/hostel/3.webp" alt="Hostel Image 3">
-                    <!-- Add more images as needed -->
                 </div>
-                <!-- Manual Slider Controls -->
                 <button class="slider-btn prev-btn" aria-label="Previous Image"><i
                         class="fas fa-chevron-left"></i></button>
                 <button class="slider-btn next-btn" aria-label="Next Image"><i
                         class="fas fa-chevron-right"></i></button>
-                <!-- Book Now Button -->
-                <button class="book-btn" data-aos="zoom-in"><i class="fas fa-book"></i> Book Now</button>
+
             </div>
-            <!-- Agent/Owner Details -->
-            <div class="agent-details" data-aos="fade-left">
-                <img src="images/agent/profile.webp" alt="Agent Profile Picture">
-                <h3>Jane Doe</h3>
-                <p><i class="fas fa-phone"></i> +233 123 4567</p>
-                <p><i class="fas fa-envelope"></i> jane.doe@example.com</p>
-                <p>Status: <span class="verified"><i class="fas fa-check-circle"></i> Verified</span></p>
+
+            <section class="hostel-info" data-aos="fade-up">
+                <p><i class="fas fa-info-circle" style="color: var(--primary-color);"></i>
+                    <strong>Description:</strong> <br>
+                </p>
+                <p><i class="fas fa-venus-mars" style="color: var(--primary-color);"></i>
+                    <strong>Gender:</strong><br> Male
+                </p>
+                <p> <i class="fa fa-tag" style="color: var(--primary-color);"></i> Price: <br> <span>&#8373;</span>2000
+                    -
+                    <span>&#8373;</span>4200
+                </p>
+                <div class="amenities">
+                    <strong><i class="fas fa-list" style="color: var(--primary-color);"></i> Amenities:</strong>
+                    <span>Wi-Fi,</span>
+                    <span>Shower,</span>
+                    <span>Kitchen</span>
+                </div>
+                <div class="proximity">
+                    <i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i>
+                    <strong>Proximity:</strong>
+                    <span> 50m from campus</span>
+                </div>
+            </section>
+        </section>
+
+        <!-- Room Cards Section -->
+        <section class="room-cards" data-aos="fade-up">
+            <h3 class="head-text">Available Rooms</h3>
+            <div class="room-card-container">
+                <div class="room-card">
+                    <h4>One in a Room</h4>
+                    <p><i class="fas fa-venus-mars"></i> <strong>Gender:</strong> Male</p>
+                    <p><i class="fas fa-concierge-bell"></i> <strong>Amenities:</strong> Wi-Fi, AC, Private Bath</p>
+                    <p><i class="fas fa-bed"></i> <strong>Available Beds: </strong> N/A </p>
+                    <button class="book-btn-2">Book Now</button>
+                </div>
+                <div class="room-card">
+                    <h4>Two in a Room</h4>
+                    <p><i class="fas fa-venus-mars"></i> <strong>Gender:</strong> Female</p>
+                    <p><i class="fas fa-concierge-bell"></i> <strong>Amenities:</strong> Wi-Fi, Fan, Shared Bath</p>
+                    <p><i class="fas fa-bed"></i> <strong>Available Beds: </strong> 1 </p>
+                    <button class="book-btn-2">Book Now</button>
+                </div>
+                <div class="room-card">
+                    <h4>Three in a Room</h4>
+                    <p><i class="fas fa-venus-mars"></i> <strong>Gender:</strong> Male</p>
+                    <p><i class="fas fa-concierge-bell"></i> <strong>Amenities:</strong> Wi-Fi, Shared Kitchen, Study
+                        Table</p>
+                    <p><i class="fas fa-bed"></i> <strong>Available Beds: </strong> 2</p>
+                    <button class="book-btn-2">Book Now</button>
+                </div>
+                <div class="room-card">
+                    <h4>Four in a Room</h4>
+                    <p><i class="fas fa-venus-mars"></i> <strong>Gender:</strong> Female</p>
+                    <p><i class="fas fa-concierge-bell"></i> <strong>Amenities:</strong> Wi-Fi, Balcony, Common Room</p>
+                    <p><i class="fas fa-bed"></i> <strong>Available Beds: </strong> 4</p>
+                    <button class="book-btn-2">Book Now</button>
+                </div>
+                <div class="room-card">
+                    <h4>Five in a Room</h4>
+                    <p><i class="fas fa-venus-mars"></i> <strong>Gender:</strong> Mixed</p>
+                    <p><i class="fas fa-concierge-bell"></i> <strong>Amenities:</strong> Wi-Fi, Laundry, Lounge</p>
+                    <p><i class="fas fa-bed"></i> <strong>Available Beds: </strong>3</p>
+                    <button class="book-btn-2">Book Now</button>
+                </div>
             </div>
         </section>
 
-        <!-- Hostel Information Section -->
-        <section class="hostel-info" data-aos="fade-up">
-            <h2>Sunrise Hostel</h2>
-            <p class="price"><i class="fas fa-dollar-sign"></i> $250 - $300/month</p>
-            <div class="amenities">
-                <strong>Amenities:</strong>
-                <span><i class="fas fa-wifi"></i> Wi-Fi</span>
-                <span><i class="fas fa-shower"></i> Shower</span>
-                <span><i class="fas fa-utensils"></i> Kitchen</span>
-                <!-- Add more amenities as needed -->
-            </div>
-            <div class="proximity">
-                <strong>Proximity:</strong>
-                <span><i class="fas fa-map-marker-alt"></i> 50m from campus</span>
-            </div>
-        </section>
+        <!-- Similar Hostels Section -->
+        <section class="similar-hostels" data-aos="fade-up">
+            <h3 class="head-text">Similar Hostels</h3>
+            <section class="hostel-listings" data-aos="fade-up" data-aos-once="false">
+                <article class="hostel-card" data-location="central-campus" data-min-price="2000" data-max-price="4200"
+                    data-room-type="single" data-water-bill="yes" data-light-bill="yes">
+                    <img src="images/hostel/hostel (4).jpg" alt="Green Garden Hostel - Central Campus" />
+                    <div class="hostel-card-content">
+                        <p><i class="fas fa-map"></i> Central Campus <span><i class="fas fa-map-marker-alt"></i>
+                                50m</span>
+                        </p>
+                        <p>Price: <span>&#8373;</span>2000 - <span>&#8373;</span>4200</p>
+                    </div>
+                </article>
 
-        <!-- Hostel Suggestions Section -->
-        <section class="suggestions" data-aos="fade-up">
-            <!-- Example Suggestion Cards -->
-            <div class="suggestion-card">
-                <img src="images/hostel/1.webp" alt="Suggested Hostel 1">
-                <div class="card-content">
-                    <h4>Sunrise Hostel</h4>
-                    <p><i class="fas fa-dollar-sign"></i> $250/month</p>
-                </div>
-            </div>
-            <div class="suggestion-card">
-                <img src="images/hostel/2.webp" alt="Suggested Hostel 2">
-                <div class="card-content">
-                    <h4>City View Hostel</h4>
-                    <p><i class="fas fa-dollar-sign"></i> $300/month</p>
-                </div>
-            </div>
-            <div class="suggestion-card">
-                <img src="images/hostel/3.webp" alt="Suggested Hostel 3">
-                <div class="card-content">
-                    <h4>Green Garden Hostel</h4>
-                    <p><i class="fas fa-dollar-sign"></i> $200/month</p>
-                </div>
-            </div>
-            <!-- Add more suggestion cards as needed -->
-        </section>
+                <article class="hostel-card" data-location="central-campus" data-min-price="3300" data-max-price="5200"
+                    data-room-type="double" data-water-bill="no" data-light-bill="yes">
+                    <img src="images/hostel/hostel (5).jpg" alt="City View Hostel - City Center" />
+                    <div class="hostel-card-content">
+                        <p><i class="fas fa-map"></i> Central Campus <span><i class="fas fa-map-marker-alt"></i>
+                                50m</span>
+                        </p>
+                        <p>Price: <span>&#8373;</span>3300 - <span>&#8373;</span>5200</p>
+                    </div>
+                </article>
+
+                <article class="hostel-card" data-location="north-campus" data-min-price="3000" data-max-price="5200"
+                    data-room-type="single" data-water-bill="no" data-light-bill="yes">
+                    <img src="images/hostel/hostel (2).jpg" alt="City View Hostel - City Center" />
+                    <div class="hostel-card-content">
+                        <p><i class="fas fa-map"></i> North Campus <span><i class="fas fa-map-marker-alt"></i>
+                                50m</span>
+                        </p>
+                        <p>Price: <span>&#8373;</span>3000 - <span>&#8373;</span>5200</p>
+                    </div>
+                </article>
+
+                <article class="hostel-card" data-location="south-campus" data-min-price="2500" data-max-price="6000"
+                    data-room-type="single" data-water-bill="yes" data-light-bill="yes">
+                    <img src="images/hostel/hostel (3).jpg" alt="Green Garden Hostel - South Campus" />
+                    <div class="hostel-card-content">
+                        <p><i class="fas fa-map"></i> South Campus <span><i class="fas fa-map-marker-alt"></i>
+                                50m</span>
+                        </p>
+                        <p>Price: <span>&#8373;</span>2500 - <span>&#8373;</span>6000</p>
+                    </div>
+                </article>
+            </section>
     </div>
 
-    <!-- FontAwesome JS (optional if needed for dynamic icons) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-..."
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- AOS Library JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-..." crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
     <script>
@@ -122,7 +176,6 @@
             once: false
         });
 
-        // Simple slider functionality
         let currentSlide = 0;
         const sliderImages = document.querySelectorAll('.slider img');
         const totalSlides = sliderImages.length;
@@ -133,13 +186,11 @@
             });
         }
 
-        // Auto-play slider every 4 seconds
         setInterval(() => {
             currentSlide = (currentSlide + 1) % totalSlides;
             showSlide(currentSlide);
         }, 4000);
     </script>
-
 </body>
 
 </html>
